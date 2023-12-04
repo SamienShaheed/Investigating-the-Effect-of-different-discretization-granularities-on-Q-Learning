@@ -20,8 +20,7 @@ def energy_stored(observations):
     kinetic = 0.5 * mass * (velocity ** 2)
     potential = mass * gravity * np.cos(3 * position)
 
-    # as there is no friction in the system
-    # total energy = kinetic energy + potential energy
+    # Total Energy = Kinetic energy + Potential energy
     return kinetic + potential
 
 # Main Q-Learning Algorithm
@@ -39,15 +38,18 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
                           size=(num_states[0], num_states[1],
                                 env.action_space.n))
 
-    # Initialize variables to track rewards and times
+    # Initialize variables to track evaluation metrics
     reward_list = []
     avg_episode_reward_list = []
+    
     time_list = []
     avg_episode_time_list = []
-
-    # Initialize dictionaries to track state visits and action distribution
-    state_visits = {}
-    action_distribution = {action: 0 for action in range(env.action_space.n)}
+    
+    entropy_list = []
+    avg_episode_entropy_list = []
+    
+    coverage_list = []
+    avg_episode_coverage_list = []
 
     ######################################################
     # Calculate episodic reduction in epsilon
@@ -111,12 +113,18 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
         
         # Calculate exploration entropy after the episode ends
         entropy = calculate_entropy(action_distribution)
+        entropy_list.append(entropy) # Add entropy to list
+        
+        # Calculate the coverage
+        coverage = len(state_visits) / np.prod(env.observation_space.shape)
+        coverage_list.append(coverage)
         
         # Track rewards and time
         toc = time.perf_counter()
         reward_list.append(tot_reward)
         time_list.append(toc - tic)
 
+        # Calculate average over every logFrequency (default 100)
         if (i + 1) % logFrequency == 0:
             avg_episode_reward = np.mean(reward_list)
             avg_episode_reward_list.append(avg_episode_reward)
@@ -127,12 +135,18 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
             avg_episode_time_list.append(avg_episode_time)
             time_list = []
 
-            # After each episode
-            entropy = calculate_entropy(action_distribution)
-            print(f"Entropy after episode {i}: {entropy}")
+            # Calculate Average Entropy
+            avg_episode_entropy = np.mean(entropy_list)
+            avg_episode_entropy_list.append(avg_episode_entropy)
             
-            # print results + time every 100 episodes
+            # Calculate Average Coverage
+            avg_episode_coverage = np.mean(coverage_list)
+            avg_episode_coverage_list.append(avg_episode_coverage)
+            
+            # print metrics every 100 episodes
             print(f"""Episode: {i + 1}
+    Coverage after episode {i+1}: {avg_episode_coverage}
+    Entropy after episode {i+1}: {avg_episode_entropy}
     Average Reward: {avg_episode_reward}
     Average Time Taken: {avg_episode_time:0.7f}s""")
 
@@ -141,4 +155,4 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
     total_time_end = time.perf_counter()
     total_time = total_time_end - total_time_start
 
-    return avg_episode_reward_list, avg_episode_time_list, total_time
+    return avg_episode_reward_list, avg_episode_time_list, total_time, avg_episode_coverage_list, avg_episode_entropy_list

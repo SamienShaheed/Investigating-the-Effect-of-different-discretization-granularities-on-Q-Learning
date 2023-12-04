@@ -1,4 +1,5 @@
 import os
+import csv
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -16,29 +17,35 @@ def stability(rewards):
     avg_stability = stability / (len(rewards) + 2)
     return avg_stability * 100
 
-def output(rewards, times, total_time, granularity='1x', run="1"):
+def output(rewards, times, total_time, epsilon, entropy, coverage, granularity='1x', run="1"):
     results = f"""Granularity: {granularity}
+    Epsilon: {epsilon}
     Total time: {total_time:0.7f}s
     Best average reward: {rewards[-1]}
     Best time: {times[-1]}s
+    Entropy: {entropy}
+    Coverage: {coverage}
     Stability: {stability(rewards)}%"""
 
     print(results)
 
     here = os.path.dirname(os.path.realpath(__file__))
-    run_directory = os.path.join(here, f"run_{run}")
+    root_directory = os.path.dirname(here)
+    results_directory = os.path.join(root_directory, "results")
+    run_directory = os.path.join(results_directory, f"run{run}")
     subdirectory = os.path.join(run_directory, granularity)
-    filepath = os.path.join(subdirectory, f"{granularity}_experiment_results.txt")
+    filepath = os.path.join(run_directory, f"{granularity}_experiment_results.csv")
 
     if not os.path.isdir(run_directory):
         os.mkdir(run_directory)
     if not os.path.isdir(subdirectory):
         os.mkdir(subdirectory)
 
-    with open(filepath, 'w') as f:
-        print(results, file=f)
-        print("\n" + f"Rewards: {rewards}", file=f)
-        print("\n" + f"Times: {times}", file=f)
+    with open(filepath, 'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(['Rewards', 'Times'])
+        for reward, time in zip(rewards, times):
+            csvwriter.writerow([reward, time])
 
     # Plot Rewards
     plt.plot(100 * (np.arange(len(rewards)) + 1), rewards)
