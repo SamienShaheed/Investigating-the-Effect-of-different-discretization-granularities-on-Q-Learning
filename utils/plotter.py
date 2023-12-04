@@ -56,11 +56,19 @@ def output(rewards, times, total_time, epsilon, entropy, coverage, granularity='
     plt.close()
 
     # Plot Time
-    plt.plot(100 * (np.arange(len(rewards)) + 1), times, color='red')
+    plt.plot(100 * (np.arange(len(times)) + 1), times, color='red')
     plt.xlabel('Episodes')
     plt.ylabel('Average Time (in seconds)')
     plt.title('Average Time vs Episodes')
     plt.savefig(os.path.join(subdirectory, f"{granularity}_times.jpg"))
+    plt.close()
+    
+    # Plot Entropy
+    plt.plot(100 * (np.arange(len(entropy)) + 1), entropy, color='green')
+    plt.xlabel('Episodes')
+    plt.ylabel('Average Entropy')
+    plt.title('Average Entropy vs Episodes')
+    plt.savefig(os.path.join(subdirectory, f"{granularity}_entropy.jpg"))
     plt.close()
 
     with open(os.path.join(here, f"all_experiment_results.txt"), 'a') as f:
