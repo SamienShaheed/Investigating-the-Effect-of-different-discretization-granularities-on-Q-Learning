@@ -544,3 +544,1095 @@ Granularity: 100x
     Entropy: 1.0985907658220493
     Coverage: 95441.0
     Stability: 359.182617430954%
+
+
+Run: 1:
+
+
+Granularity: Quarter
+    Epsilon: 0.8
+    Total time: 40.3866037s
+    Best average reward: -192.60787150555356
+    Best time: 0.004103268999897409s
+    Entropy: 1.0984561288738375s
+    Coverage: 4.89005s
+    Stability: 311.1318365942925%
+
+
+Run: 1:
+
+
+Granularity: Half
+    Epsilon: 0.8
+    Total time: 41.6568724s
+    Best average reward: -183.8366206034516
+    Best time: 0.003946913998515811s
+    Entropy: 1.095665809205272s
+    Coverage: 11.94s
+    Stability: 284.3587348353982%
+
+
+Run: 1:
+
+
+Granularity: 1x
+    Epsilon: 0.8
+    Total time: 41.0842039s
+    Best average reward: -172.55498245581543
+    Best time: 0.004248224002076313s
+    Entropy: 1.0896179844253022s
+    Coverage: 32.17235s
+    Stability: 160.34088376980316%
+
+
+Run: 1:
+
+
+Granularity: 2x
+    Epsilon: 0.8
+    Total time: 40.6585376s
+    Best average reward: -166.43301950150635
+    Best time: 0.003920691001112573s
+    Entropy: 1.0804242070892247s
+    Coverage: 124.03185s
+    Stability: 362.24769735144065%
+
+
+Run: 1:
+
+
+Granularity: 5x
+    Epsilon: 0.8
+    Total time: 42.5850370s
+    Best average reward: -156.45059929333598
+    Best time: 0.004065831002371852s
+    Entropy: 1.0772505281872797s
+    Coverage: 696.39535s
+    Stability: 237.25474395096063%
+
+
+Run: 1:
+
+
+Granularity: 10x
+    Epsilon: 0.8
+    Total time: 41.7764403s
+    Best average reward: -157.20764564970793
+    Best time: 0.00414258200005861s
+    Entropy: 1.0855725673872958s
+    Coverage: 2468.40685s
+    Stability: 413.04095550822353%
+
+
+Run: 1:
+
+
+Granularity: 100x
+    Epsilon: 0.8
+    Total time: 43.2553092s
+    Best average reward: -192.5621288120774
+    Best time: 0.004092040999967139s
+    Entropy: 1.0986044460478717s
+    Coverage: 70068.3458s
+    Stability: 156.22667757121934%
+
+
+Run: 2:
+
+
+Granularity: Quarter
+    Epsilon: 0.8
+    Total time: 39.2799573s
+    Best average reward: -191.1090055195035
+    Best time: 0.003913201000541449s
+    Entropy: 1.0984790202783052s
+    Coverage: 4.96145s
+    Stability: 242.90541104150515%
+
+
+Run: 2:
+
+
+Granularity: Half
+    Epsilon: 0.8
+    Total time: 39.5197286s
+    Best average reward: -183.46911528954396
+    Best time: 0.004020571000874043s
+    Entropy: 1.0954337879007192s
+    Coverage: 11.1798s
+    Stability: 383.9703160643403%
+
+
+Run: 2:
+
+
+Granularity: 1x
+    Epsilon: 0.8
+    Total time: 41.3967220s
+    Best average reward: -171.76154863756838
+    Best time: 0.004713921000075061s
+    Entropy: 1.0897393572247838s
+    Coverage: 35.03415s
+    Stability: 197.45515468378045%
+
+
+Run: 2:
+
+
+Granularity: 2x
+    Epsilon: 0.8
+    Total time: 48.9223740s
+    Best average reward: -164.99884466990744
+    Best time: 0.0045796000020345675s
+    Entropy: 1.0812404920105436s
+    Coverage: 156.80385s
+    Stability: 222.86810991939575%
+
+
+Run: 2:
+
+
+Granularity: 5x
+    Epsilon: 0.8
+    Total time: 41.6281536s
+    Best average reward: -156.0498138701914
+    Best time: 0.004149669000180438s
+    Entropy: 1.0769777366253501s
+    Coverage: 728.7724s
+    Stability: 275.5619398603889%
+
+
+Run: 2:
+
+
+Granularity: 10x
+    Epsilon: 0.8
+    Total time: 40.3627309s
+    Best average reward: -158.31559726173467
+    Best time: 0.003934444999031257s
+    Entropy: 1.0858759941160878s
+    Coverage: 2520.47875s
+    Stability: 214.83970816040002%
+
+
+Run: 2:
+
+
+Granularity: 100x
+    Epsilon: 0.8
+    Total time: 42.1025520s
+    Best average reward: -197.45130673856357
+    Best time: 0.004179304001736455s
+    Entropy: 1.0986032789088676s
+    Coverage: 70486.58715s
+    Stability: 1610.9348642172965%
+
+
+Run: 3:
+
+
+Granularity: Quarter
+    Epsilon: 0.8
+    Total time: 38.5605336s
+    Best average reward: -194.2366801736028
+    Best time: 0.003823876999667846s
+    Entropy: 1.0984718064996053s
+    Coverage: 4.9137s
+    Stability: 339.6721798084411%
+
+
+Run: 3:
+
+
+Granularity: Half
+    Epsilon: 0.8
+    Total time: 39.5437418s
+    Best average reward: -181.75200254421426
+    Best time: 0.0037923839990980923s
+    Entropy: 1.0951493156231251s
+    Coverage: 11.9467s
+    Stability: 197.4225586448781%
+
+
+Run: 3:
+
+
+Granularity: 1x
+    Epsilon: 0.8
+    Total time: 40.4041638s
+    Best average reward: -171.57416155896706
+    Best time: 0.004058094999054447s
+    Entropy: 1.0897153945923876s
+    Coverage: 36.556s
+    Stability: 2482.5883710100397%
+
+
+Run: 3:
+
+
+Granularity: 2x
+    Epsilon: 0.8
+    Total time: 43.0441245s
+    Best average reward: -164.22413253875908
+    Best time: 0.005028839999285992s
+    Entropy: 1.080863991296283s
+    Coverage: 124.2879s
+    Stability: 235.20439102441966%
+
+
+Run: 3:
+
+
+Granularity: 5x
+    Epsilon: 0.8
+    Total time: 41.1064817s
+    Best average reward: -159.93500551286644
+    Best time: 0.004000429998268373s
+    Entropy: 1.077219731058501s
+    Coverage: 689.7163s
+    Stability: 343.83884918122124%
+
+
+Run: 3:
+
+
+Granularity: 10x
+    Epsilon: 0.8
+    Total time: 40.6051274s
+    Best average reward: -154.09280162502748
+    Best time: 0.00445648200053256s
+    Entropy: 1.0857156210802783s
+    Coverage: 2566.4201s
+    Stability: 408.3172877324485%
+
+
+Run: 3:
+
+
+Granularity: 100x
+    Epsilon: 0.8
+    Total time: 47.4672263s
+    Best average reward: -192.57309618610066
+    Best time: 0.00506553600076586s
+    Entropy: 1.0986043233388514s
+    Coverage: 70375.1426s
+    Stability: 349.4100051492347%
+
+
+Run: 1:
+
+
+Granularity: Quarter
+    Epsilon: 0.8
+    Total time: 40.6173382s
+    Best average reward: -195.20154723918668
+    Best time: 0.004049099000403658s
+    Entropy: 1.0984851102731699s
+    Coverage: 5.2993s
+    Stability: 315.5673857779012%
+
+
+Run: 1:
+
+
+Granularity: Half
+    Epsilon: 0.8
+    Total time: 38.9310096s
+    Best average reward: -184.50963836403687
+    Best time: 0.003910182999388781s
+    Entropy: 1.0955766122443966s
+    Coverage: 11.38425s
+    Stability: 403.3966446538911%
+
+
+Run: 1:
+
+
+Granularity: 1x
+    Epsilon: 0.8
+    Total time: 40.5816262s
+    Best average reward: -174.26750632107706
+    Best time: 0.0040938230018946345s
+    Entropy: 1.0893581872434486s
+    Coverage: 33.97995s
+    Stability: 169.78833980730366%
+
+
+Run: 1:
+
+
+Granularity: 2x
+    Epsilon: 0.8
+    Total time: 43.2767359s
+    Best average reward: -161.43055107650255
+    Best time: 0.003938997000223026s
+    Entropy: 1.0807693480584737s
+    Coverage: 126.38125s
+    Stability: 460.2210567539721%
+
+
+Run: 1:
+
+
+Granularity: 5x
+    Epsilon: 0.8
+    Total time: 47.2849189s
+    Best average reward: -158.26859486712752
+    Best time: 0.004346509000752122s
+    Entropy: 1.0770839111287642s
+    Coverage: 706.56265s
+    Stability: 1707.28158759401%
+
+
+Run: 1:
+
+
+Granularity: 10x
+    Epsilon: 0.8
+    Total time: 40.5292006s
+    Best average reward: -158.77420243880064
+    Best time: 0.003940483001060784s
+    Entropy: 1.0855452544844202s
+    Coverage: 2467.9077s
+    Stability: 255.3862056734402%
+
+
+Run: 1:
+
+
+Granularity: 100x
+    Epsilon: 0.8
+    Total time: 41.1967376s
+    Best average reward: -192.6103994220206
+    Best time: 0.003961305999255273s
+    Entropy: 1.0986033877452142s
+    Coverage: 70465.80225s
+    Stability: 192.57127231808295%
+
+
+Run: 2:
+
+
+Granularity: Quarter
+    Epsilon: 0.8
+    Total time: 41.4817737s
+    Best average reward: -194.10399463511555
+    Best time: 0.0039485559999593535s
+    Entropy: 1.0984742259850433s
+    Coverage: 4.94155s
+    Stability: 223.78751706961953%
+
+
+Run: 2:
+
+
+Granularity: Half
+    Epsilon: 0.8
+    Total time: 40.8864789s
+    Best average reward: -186.027040993055
+    Best time: 0.0047934009984601286s
+    Entropy: 1.0955139499910547s
+    Coverage: 11.02175s
+    Stability: 384.5130741458465%
+
+
+Run: 2:
+
+
+Granularity: 1x
+    Epsilon: 0.8
+    Total time: 41.4629084s
+    Best average reward: -176.5024165094887
+    Best time: 0.004062439001863823s
+    Entropy: 1.0892631816188827s
+    Coverage: 34.375s
+    Stability: 308.03134386507617%
+
+
+Run: 2:
+
+
+Granularity: 2x
+    Epsilon: 0.8
+    Total time: 43.0441660s
+    Best average reward: -164.4576782562212
+    Best time: 0.0038116880017332734s
+    Entropy: 1.080971593965403s
+    Coverage: 114.5616s
+    Stability: 158.58112883138148%
+
+
+Run: 2:
+
+
+Granularity: 5x
+    Epsilon: 0.8
+    Total time: 39.9538522s
+    Best average reward: -155.9761094687253
+    Best time: 0.004147245999483858s
+    Entropy: 1.0766080696146143s
+    Coverage: 653.9098s
+    Stability: 174.36137415196526%
+
+
+Run: 2:
+
+
+Granularity: 10x
+    Epsilon: 0.8
+    Total time: 40.7601955s
+    Best average reward: -156.09072274370627
+    Best time: 0.0039792539976770055s
+    Entropy: 1.0859608985193547s
+    Coverage: 2425.91195s
+    Stability: 234.59529861648102%
+
+
+Run: 2:
+
+
+Granularity: 100x
+    Epsilon: 0.8
+    Total time: 42.2138531s
+    Best average reward: -195.49637035289084
+    Best time: 0.004072527000971604s
+    Entropy: 1.0986046628196662s
+    Coverage: 70748.1276s
+    Stability: 521.9143773304995%
+
+
+Run: 3:
+
+
+Granularity: Quarter
+    Epsilon: 0.8
+    Total time: 39.4727426s
+    Best average reward: -193.644192330642
+    Best time: 0.0037652700016042218s
+    Entropy: 1.098498726634997s
+    Coverage: 4.9618s
+    Stability: 328.1797845573845%
+
+
+Run: 3:
+
+
+Granularity: Half
+    Epsilon: 0.8
+    Total time: 38.4662694s
+    Best average reward: -186.15725342762852
+    Best time: 0.0037583770012133756s
+    Entropy: 1.0955664900087014s
+    Coverage: 11.94625s
+    Stability: 462.18240607982307%
+
+
+Run: 3:
+
+
+Granularity: 1x
+    Epsilon: 0.8
+    Total time: 47.3987442s
+    Best average reward: -176.0257262444438
+    Best time: 0.004059899999992922s
+    Entropy: 1.0896481781027363s
+    Coverage: 33.8638s
+    Stability: 263.39397305559424%
+
+
+Run: 3:
+
+
+Granularity: 2x
+    Epsilon: 0.8
+    Total time: 46.1285316s
+    Best average reward: -164.52475403250978
+    Best time: 0.004197303001128603s
+    Entropy: 1.0805345583145272s
+    Coverage: 127.31165s
+    Stability: 220.61985080375104%
+
+
+Run: 3:
+
+
+Granularity: 5x
+    Epsilon: 0.8
+    Total time: 44.0881726s
+    Best average reward: -153.9095932235003
+    Best time: 0.004133625002286863s
+    Entropy: 1.0766596195123048s
+    Coverage: 710.34135s
+    Stability: 412.9354690087777%
+
+
+Run: 3:
+
+
+Granularity: 10x
+    Epsilon: 0.8
+    Total time: 49.5094556s
+    Best average reward: -160.0191052307127
+    Best time: 0.004612478999188169s
+    Entropy: 1.085778309085907s
+    Coverage: 2470.4232s
+    Stability: 246.77484722891356%
+
+
+Run: 3:
+
+
+Granularity: 100x
+    Epsilon: 0.8
+    Total time: 48.6973196s
+    Best average reward: -195.12903310611745
+    Best time: 0.009029657001083252s
+    Entropy: 1.0985978682560171s
+    Coverage: 69810.6016s
+    Stability: 111.39140760533579%
+
+
+Run: 1:
+
+
+Granularity: Quarter
+    Epsilon: 0.2
+    Total time: 40.3785479s
+    Best average reward: -130.89132667708583
+    Best time: 0.003969388002587948s
+    Entropy: 1.0134081818116591s
+    Coverage: 7.63565s
+    Stability: 240.62545472693833%
+
+
+Run: 1:
+
+
+Granularity: Half
+    Epsilon: 0.2
+    Total time: 40.6371738s
+    Best average reward: -105.80134291197476
+    Best time: 0.004142157999158371s
+    Entropy: 0.932719499081484s
+    Coverage: 21.9076s
+    Stability: 294.6103362168563%
+
+
+Run: 1:
+
+
+Granularity: 1x
+    Epsilon: 0.2
+    Total time: 42.7691751s
+    Best average reward: -75.05484189973293
+    Best time: 0.004443949999695178s
+    Entropy: 0.8601417467496317s
+    Coverage: 70.2695s
+    Stability: 187.25725070573452%
+
+
+Run: 1:
+
+
+Granularity: 2x
+    Epsilon: 0.2
+    Total time: 42.2867829s
+    Best average reward: -52.609280499086765
+    Best time: 0.004498851000098511s
+    Entropy: 0.7827360039187982s
+    Coverage: 220.7205s
+    Stability: 187.16808991542038%
+
+
+Run: 1:
+
+
+Granularity: 5x
+    Epsilon: 0.2
+    Total time: 43.7186337s
+    Best average reward: -38.90260445429572
+    Best time: 0.004150183997990098s
+    Entropy: 0.816089759897311s
+    Coverage: 1154.57605s
+    Stability: 332.28925460853947%
+
+
+Run: 1:
+
+
+Granularity: 10x
+    Epsilon: 0.2
+    Total time: 45.5809027s
+    Best average reward: -50.85904449515871
+    Best time: 0.004268483000632841s
+    Entropy: 0.9882317449291832s
+    Coverage: 3742.5099s
+    Stability: 158.72762136610714%
+
+
+Run: 1:
+
+
+Granularity: 100x
+    Epsilon: 0.2
+    Total time: 47.0866120s
+    Best average reward: -190.69522088398256
+    Best time: 0.004510482999321539s
+    Entropy: 1.0985409327830202s
+    Coverage: 74707.62555s
+    Stability: 215.6754554448244%
+
+
+Run: 2:
+
+
+Granularity: Quarter
+    Epsilon: 0.2
+    Total time: 41.4668681s
+    Best average reward: -135.0823863558952
+    Best time: 0.00426594599877717s
+    Entropy: 1.0101230327155715s
+    Coverage: 6.1405s
+    Stability: 194.68392799305428%
+
+
+Run: 2:
+
+
+Granularity: Half
+    Epsilon: 0.2
+    Total time: 44.3953870s
+    Best average reward: -104.24649944661083
+    Best time: 0.004522008999774698s
+    Entropy: 0.9373911115326624s
+    Coverage: 21.50185s
+    Stability: 475.78575488772765%
+
+
+Run: 2:
+
+
+Granularity: 1x
+    Epsilon: 0.2
+    Total time: 45.8899808s
+    Best average reward: -75.77381652101646
+    Best time: 0.004814136998611503s
+    Entropy: 0.8641483291160986s
+    Coverage: 71.03245s
+    Stability: 290.4341146135035%
+
+
+Run: 2:
+
+
+Granularity: 2x
+    Epsilon: 0.2
+    Total time: 51.3216507s
+    Best average reward: -47.317663061114175
+    Best time: 0.005418135001964402s
+    Entropy: 0.7768396211214005s
+    Coverage: 211.08715s
+    Stability: 220.8739206133354%
+
+
+Run: 2:
+
+
+Granularity: 5x
+    Epsilon: 0.2
+    Total time: 47.0376397s
+    Best average reward: -33.999563876096424
+    Best time: 0.004436717001372017s
+    Entropy: 0.8052676677050158s
+    Coverage: 1136.5111s
+    Stability: 180.44045975674672%
+
+
+Run: 2:
+
+
+Granularity: 10x
+    Epsilon: 0.2
+    Total time: 45.8303621s
+    Best average reward: -49.63665881383491
+    Best time: 0.004717398998036515s
+    Entropy: 0.9802930670463971s
+    Coverage: 3590.66055s
+    Stability: 221.809706436623%
+
+
+Run: 2:
+
+
+Granularity: 100x
+    Epsilon: 0.2
+    Total time: 46.9124119s
+    Best average reward: -192.37334863876947
+    Best time: 0.004569680999848061s
+    Entropy: 1.0985687406358953s
+    Coverage: 73040.0968s
+    Stability: 189.02893814100966%
+
+
+Run: 3:
+
+
+Granularity: Quarter
+    Epsilon: 0.2
+    Total time: 44.1238030s
+    Best average reward: -133.874277253468
+    Best time: 0.004323327001184225s
+    Entropy: 1.0135322203563515s
+    Coverage: 6.9641s
+    Stability: 174.93054478637976%
+
+
+Run: 3:
+
+
+Granularity: Half
+    Epsilon: 0.2
+    Total time: 44.3635954s
+    Best average reward: -98.87472878814874
+    Best time: 0.004402830998587888s
+    Entropy: 0.9337815201053407s
+    Coverage: 22.69735s
+    Stability: 907.4588899763866%
+
+
+Run: 3:
+
+
+Granularity: 1x
+    Epsilon: 0.2
+    Total time: 44.5696785s
+    Best average reward: -77.07264082594484
+    Best time: 0.004269027000991628s
+    Entropy: 0.863825490208929s
+    Coverage: 70.52645s
+    Stability: 816.9334970860124%
+
+
+Run: 3:
+
+
+Granularity: 2x
+    Epsilon: 0.2
+    Total time: 41.6759502s
+    Best average reward: -50.6256870394856
+    Best time: 0.004324960999947507s
+    Entropy: 0.7800223505656606s
+    Coverage: 215.8526s
+    Stability: 186.78497696506463%
+
+
+Run: 3:
+
+
+Granularity: 5x
+    Epsilon: 0.2
+    Total time: 42.2732112s
+    Best average reward: -38.71584986068891
+    Best time: 0.00422339200071292s
+    Entropy: 0.824696093764839s
+    Coverage: 1133.0012s
+    Stability: 148.84199605263962%
+
+
+Run: 3:
+
+
+Granularity: 10x
+    Epsilon: 0.2
+    Total time: 43.0110964s
+    Best average reward: -43.599501963241934
+    Best time: 0.004202903000696097s
+    Entropy: 0.9748546077421801s
+    Coverage: 3664.2231s
+    Stability: 233.26932317703773%
+
+
+Run: 3:
+
+
+Granularity: 100x
+    Epsilon: 0.2
+    Total time: 45.3848379s
+    Best average reward: -188.66517865484417
+    Best time: 0.004175244000798557s
+    Entropy: 1.098560956837489s
+    Coverage: 73983.90225s
+    Stability: 150.93955766880032%
+
+
+Run: 1:
+
+
+Granularity: Quarter
+    Epsilon: 0.5
+    Total time: 45.3154976s
+    Best average reward: -175.31970536703383
+    Best time: 0.004036113000765908s
+    Entropy: 1.0912471889973085s
+    Coverage: 5.7224s
+    Stability: 312.71037371337644%
+
+
+Run: 1:
+
+
+Granularity: Half
+    Epsilon: 0.5
+    Total time: 42.3996466s
+    Best average reward: -154.4898439068608
+    Best time: 0.0041358120008953845s
+    Entropy: 1.0683124047703276s
+    Coverage: 14.36675s
+    Stability: 467.1064454977164%
+
+
+Run: 1:
+
+
+Granularity: 1x
+    Epsilon: 0.5
+    Total time: 43.3678594s
+    Best average reward: -132.09813316702602
+    Best time: 0.004464698999654502s
+    Entropy: 1.034614026885918s
+    Coverage: 49.98235s
+    Stability: 170.99107694485548%
+
+
+Run: 1:
+
+
+Granularity: 2x
+    Epsilon: 0.5
+    Total time: 44.3326191s
+    Best average reward: -112.48440715246319
+    Best time: 0.004257210000068881s
+    Entropy: 0.9868961124477017s
+    Coverage: 185.6077s
+    Stability: 776.0788118444164%
+
+
+Run: 1:
+
+
+Granularity: 5x
+    Epsilon: 0.5
+    Total time: 46.8061875s
+    Best average reward: -96.89108460082774
+    Best time: 0.004076824997609947s
+    Entropy: 0.9794502844428505s
+    Coverage: 941.56115s
+    Stability: 373.940394441349%
+
+
+Run: 1:
+
+
+Granularity: 10x
+    Epsilon: 0.5
+    Total time: 45.4239677s
+    Best average reward: -100.63641358583372
+    Best time: 0.0041032450008788145s
+    Entropy: 1.0417049840212589s
+    Coverage: 3302.10115s
+    Stability: 557.310751929413%
+
+
+Run: 1:
+
+
+Granularity: 100x
+    Epsilon: 0.5
+    Total time: 44.2132065s
+    Best average reward: -193.04385460857276
+    Best time: 0.005402000999310985s
+    Entropy: 1.0985820752842244s
+    Coverage: 73460.7239s
+    Stability: 414.5829304493557%
+
+
+Run: 2:
+
+
+Granularity: Quarter
+    Epsilon: 0.5
+    Total time: 45.1558941s
+    Best average reward: -177.72605655256612
+    Best time: 0.005594539999729023s
+    Entropy: 1.0912400953526311s
+    Coverage: 5.4704s
+    Stability: 27871.70323009354%
+
+
+Run: 2:
+
+
+Granularity: Half
+    Epsilon: 0.5
+    Total time: 45.7223157s
+    Best average reward: -155.7487384826146
+    Best time: 0.00424496199877467s
+    Entropy: 1.0680131004065023s
+    Coverage: 16.54065s
+    Stability: 285.5914247642063%
+
+
+Run: 2:
+
+
+Granularity: 1x
+    Epsilon: 0.5
+    Total time: 44.1209319s
+    Best average reward: -134.5776218944768
+    Best time: 0.004915517999907024s
+    Entropy: 1.0367825769007704s
+    Coverage: 48.3691s
+    Stability: 407.8890845913198%
+
+
+Run: 2:
+
+
+Granularity: 2x
+    Epsilon: 0.5
+    Total time: 43.5299691s
+    Best average reward: -111.55792670393993
+    Best time: 0.004544517001777422s
+    Entropy: 0.9885750118245044s
+    Coverage: 172.9474s
+    Stability: 274.97807660279574%
+
+
+Run: 2:
+
+
+Granularity: 5x
+    Epsilon: 0.5
+    Total time: 51.1766637s
+    Best average reward: -95.213094701351
+    Best time: 0.0043812149984296415s
+    Entropy: 0.9796406057238626s
+    Coverage: 939.0063s
+    Stability: 453.70645479566633%
+
+
+Run: 2:
+
+
+Granularity: 10x
+    Epsilon: 0.5
+    Total time: 47.4024881s
+    Best average reward: -99.29843474920426
+    Best time: 0.004459384001092985s
+    Entropy: 1.0418258897850559s
+    Coverage: 3316.11435s
+    Stability: 531.4882928761078%
+
+
+Run: 2:
+
+
+Granularity: 100x
+    Epsilon: 0.5
+    Total time: 45.9270069s
+    Best average reward: -191.3307386822741
+    Best time: 0.004364300999732222s
+    Entropy: 1.098586717435741s
+    Coverage: 73733.5076s
+    Stability: 396.0283692185485%
+
+
+Run: 3:
+
+
+Granularity: Quarter
+    Epsilon: 0.5
+    Total time: 42.2680889s
+    Best average reward: -181.11396355961278
+    Best time: 0.003978227998304646s
+    Entropy: 1.0909822201496338s
+    Coverage: 5.8863s
+    Stability: 251.94288029741813%
+
+
+Run: 3:
+
+
+Granularity: Half
+    Epsilon: 0.5
+    Total time: 43.1654471s
+    Best average reward: -152.58940352348918
+    Best time: 0.004527199000294786s
+    Entropy: 1.067366888353834s
+    Coverage: 18.3695s
+    Stability: 4334.468738702544%
+
+
+Run: 3:
+
+
+Granularity: 1x
+    Epsilon: 0.5
+    Total time: 42.9564055s
+    Best average reward: -136.082066444654
+    Best time: 0.0041244480010936965s
+    Entropy: 1.0349823386478278s
+    Coverage: 53.89655s
+    Stability: 245.77493382948904%
+
+
+Run: 3:
+
+
+Granularity: 2x
+    Epsilon: 0.5
+    Total time: 42.7706896s
+    Best average reward: -111.88787175539751
+    Best time: 0.004132895999937318s
+    Entropy: 0.9863733858784414s
+    Coverage: 153.65945s
+    Stability: 224.41327409341824%
+
+
+Run: 3:
+
+
+Granularity: 5x
+    Epsilon: 0.5
+    Total time: 51.2330038s
+    Best average reward: -93.93150493168876
+    Best time: 0.00465610099985497s
+    Entropy: 0.9815966550035948s
+    Coverage: 974.8881s
+    Stability: 227.71534646982423%
+
+
+Run: 3:
+
+
+Granularity: 10x
+    Epsilon: 0.5
+    Total time: 51.0610401s
+    Best average reward: -102.60908797255081
+    Best time: 0.0042272840000805445s
+    Entropy: 1.0418125101850357s
+    Coverage: 3281.35575s
+    Stability: 197.68687948295332%
+
+
+Run: 3:
+
+
+Granularity: 100x
+    Epsilon: 0.5
+    Total time: 50.1023620s
+    Best average reward: -193.68678840372087
+    Best time: 0.005100750001729466s
+    Entropy: 1.0985913154501532s
+    Coverage: 72855.04935s
+    Stability: 347.5700149571254%

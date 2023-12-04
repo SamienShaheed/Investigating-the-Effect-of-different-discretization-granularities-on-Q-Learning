@@ -14,16 +14,16 @@ env.reset()
 
 # Parameters
 minEps = 0 # Used for Epsilon Decay Calculation (Not Required in Experiment)
-epsilon = 0.8 # Adjust to control level of exploration
+epsilon = 0.5 # Adjust to control level of exploration
 episodes = 10000
 logFrequency = 100 # Average results over every 100 episodes
 learningRate = 0.2
 discountFactor = 0.9
 noOfRuns = 3 # Number of times to run the experiment
 
-def run_experiment(state_granularity, action_granularity, run="1"):
+def run_experiment(granularity_label, granularity_value, run="1"):
     # Discretize the action space
-    discrete_actions = discretize_action_space(env, action_granularity)
+    discrete_actions = discretize_action_space(env, granularity_value)
     
     # Initialize tracking for state visits and action distribution
     state_visits = {}
@@ -36,7 +36,7 @@ def run_experiment(state_granularity, action_granularity, run="1"):
                                                                epsilon,
                                                                minEps,
                                                                episodes,
-                                                               action_granularity,
+                                                               granularity_value,
                                                                discrete_actions,
                                                                state_visits,
                                                                action_distribution,
@@ -44,7 +44,7 @@ def run_experiment(state_granularity, action_granularity, run="1"):
     
 
     # Output the results
-    output(rewards, times, total_time, epsilon, entropy, coverages, granularities, state_granularity, run)
+    output(rewards, times, total_time, epsilon, entropy, coverages, granularity_label, run)
     
     # Return metrics for further analysis
     return rewards, times, total_time, entropy, coverages
@@ -59,6 +59,7 @@ for run in range(1, noOfRuns+1):
 
     # Loop over granularities
     for granularity in granularities:
+        print(granularity)
         outcomes[granularity] = list(run_experiment(granularity, granularities[granularity], run))
 
     for granularity in granularities:

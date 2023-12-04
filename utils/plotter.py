@@ -23,8 +23,8 @@ def output(rewards, times, total_time, epsilon, entropy, coverage, granularity='
     Total time: {total_time:0.7f}s
     Best average reward: {rewards[-1]}
     Best time: {times[-1]}s
-    Entropy: {entropy}
-    Coverage: {coverage}
+    Entropy: {entropy[-1]}s
+    Coverage: {coverage[-1]}s
     Stability: {stability(rewards)}%"""
 
     print(results)
@@ -34,7 +34,7 @@ def output(rewards, times, total_time, epsilon, entropy, coverage, granularity='
     results_directory = os.path.join(root_directory, "results")
     run_directory = os.path.join(results_directory, f"run{run}")
     subdirectory = os.path.join(run_directory, granularity)
-    filepath = os.path.join(run_directory, f"{granularity}_experiment_results.csv")
+    filepath = os.path.join(subdirectory, f"{granularity}_experiment_results.csv")
 
     if not os.path.isdir(run_directory):
         os.mkdir(run_directory)
@@ -43,9 +43,9 @@ def output(rewards, times, total_time, epsilon, entropy, coverage, granularity='
 
     with open(filepath, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['Rewards', 'Times'])
-        for reward, time in zip(rewards, times):
-            csvwriter.writerow([reward, time])
+        csvwriter.writerow(['Rewards', 'Times', 'Entropy', 'Coverage'])
+        for avgReward, avgTime, avgEntropy, avgCoverage in zip(rewards, times, entropy, coverage):
+            csvwriter.writerow([avgReward, avgTime, avgEntropy, avgCoverage])
 
     # Plot Rewards
     plt.plot(100 * (np.arange(len(rewards)) + 1), rewards)
