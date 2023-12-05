@@ -33,6 +33,10 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
         [10 * granularity, 100 * granularity])
     num_states = np.round(num_states, 0).astype(int) + 1
 
+    # Debug Log
+    #print("Granularity:", granularity)
+    #print("Number of States:", num_states)
+    
     # Initialize Q table
     Q = np.random.uniform(low=-1, high=1,
                           size=(num_states[0], num_states[1],

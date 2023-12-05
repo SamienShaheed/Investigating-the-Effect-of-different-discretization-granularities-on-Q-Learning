@@ -14,11 +14,12 @@ env.reset()
 # Parameters
 minEps = 0 # Used for Epsilon Decay Calculation (Not Required in Experiment)
 epsilon = 0.2 # Adjust to control level of exploration
-episodes = 10000
-logFrequency = 100 # Average results over every 100 episodes
-learningRate = 0.2
-discountFactor = 0.9
 noOfRuns = 3 # Number of times to run the experiment
+episodes = 10000
+baseActions = 10 # Arbitrary number of discrete action spaces
+logFrequency = 100 # Average results over every 100 episodes
+learningRate = 0.5
+discountFactor = 0.9
 
 def run_experiment(granularity_label, granularity_value, run="1"):
     # Discretize the action space
