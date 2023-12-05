@@ -18,7 +18,7 @@ noOfRuns = 3 # Number of times to run the experiment
 episodes = 10000
 baseActions = 10 # Arbitrary number of discrete action spaces
 logFrequency = 100 # Average results over every 100 episodes
-learningRate = 0.5
+learningRate = 0.8
 discountFactor = 0.9
 
 def run_experiment(granularity_label, granularity_value, run="1"):
