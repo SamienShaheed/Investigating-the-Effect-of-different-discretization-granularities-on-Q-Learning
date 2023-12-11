@@ -8,27 +8,34 @@ from utils.qLearning import QLearning
 from utils.discretize import discretize_action_space
 
 # Import and initialize Mountain Car Environment
-env = gym.make('MountainCar-v0')
+env = gym.make('MountainCarContinuous-v0')
 env.reset()
 
 # Parameters
 minEps = 0 # Used for Epsilon Decay Calculation (Not Required in Experiment)
 epsilon = 0.2 # Adjust to control level of exploration
-noOfRuns = 3 # Number of times to run the experiment
+noOfRuns = 1 # Number of times to run the experiment
 episodes = 10000
 baseActions = 10 # Arbitrary number of discrete action spaces
 logFrequency = 100 # Average results over every 100 episodes
-learningRate = 0.8
+learningRate = 0.5
 discountFactor = 0.9
 
 def run_experiment(granularity_label, granularity_value, run="1"):
     # Discretize the action space
     discrete_actions = discretize_action_space(env, granularity_value)
     
+    # Debug Log
+    print("Discrete Acton Space: ",discrete_actions)
+    print("Number of Actions: ",len(discrete_actions))
+    
     # Initialize tracking for state visits and action distribution
     state_visits = {}
     action_distribution = {action: 0 for action in range(len(discrete_actions))}
-
+    
+    # Debug Log
+    #print("Action Distribution: ", action_distribution)
+    
     # Run the QLearning algorithm
     rewards, times, total_time, coverages, entropy = QLearning(env,
                                                                learningRate,
@@ -50,7 +57,7 @@ def run_experiment(granularity_label, granularity_value, run="1"):
     return rewards, times, total_time, entropy, coverages
 
 # set up all granularities here so we can loop over them, instead of repeating code
-granularities = {"Quarter": 0.25, "Half": 0.5, "1x": 1, "2x": 2, "5x": 5, "10x": 10, "100x": 100}
+granularities = {"Quarter": 0.25, "Half": 0.5, "1x": 1}
 here = os.path.dirname(os.path.realpath(__file__))
 
 for run in range(1, noOfRuns+1):

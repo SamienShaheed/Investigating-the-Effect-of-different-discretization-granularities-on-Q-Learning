@@ -39,7 +39,10 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
     # Initialize Q table
     Q = np.random.uniform(low=-1, high=1,
                           size=(num_states[0], num_states[1],
-                                env.action_space.n))
+                                len(discrete_actions)))
+
+    # Debug Log
+    #print(Q)
 
     # Initialize variables to track evaluation metrics
     reward_list = []
@@ -56,7 +59,7 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
 
     ######################################################
     # Calculate episodic reduction in epsilon
-    #reduction = (epsilon - min_eps) / episodes
+    reduction = (epsilon - min_eps) / episodes
     ######################################################
 
     # Run Q learning algorithm
@@ -71,6 +74,9 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
         state_adj = (state - discrete_actions[0]) * np.array([10 * granularity, 100 * granularity])
         state_adj = np.round(state_adj, 0).astype(int)
 
+        # Debug Log
+        #print("State adj: ", state_adj)
+        
         while not terminated and not truncated:
            # Before taking an action, we track the current state's visit count
             state_key = tuple(state_adj)  # Convert the state to a tuple to use as a dictionary key
@@ -80,15 +86,25 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
             if np.random.random() < 1 - epsilon:
                 action = np.argmax(Q[state_adj[0], state_adj[1]])
             else:
-                action = np.random.randint(0, env.action_space.n)
+                action = np.random.randint(0, len(discrete_actions))
 
+            # Debug Log
+            #if action == 1:
+            #    print("Action Value: ", action)
+            
+            #action_distribution = {action: 0 for action in range(len(discrete_actions))}
             action_distribution[action] += 1  # Track action distribution
             
+            # Debug Log
+            #print("Action : ", action)
+            #print("Action Distribution: ", action_distribution[action])
+            
             # Get next state and reward
-            state2, reward, terminated, truncated, _ = env.step(action)
+            state2, reward, terminated, truncated, _ = env.step(np.array([action]))
             # update the reward, considering the original reward (-1 for each timestep) + energy stored * 100 as a
             # scaling factor to keep make both variables equally important (both to 1 decimal)
-            reward += energy_stored(state2) * 1000
+            reward += energy_stored(state2) * 100
+            #print("Reward before: ", reward)
 
             # Discretize state2
             state2_adj = (state2 - discrete_actions[0]) * np.array([10 * granularity, 100 * granularity])
@@ -107,11 +123,15 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
             # Update variables
             tot_reward += reward
             state_adj = state2_adj
+            
+            # Debug Log
+            #print("Reward: ", reward)
+            #print("Total Reward: ", tot_reward)
 
         ###############################
         # Decay epsilon
-        #if epsilon > min_eps:
-        #   epsilon -= reduction
+        if epsilon > min_eps:
+           epsilon -= reduction
         ###############################
         
         # Calculate exploration entropy after the episode ends
