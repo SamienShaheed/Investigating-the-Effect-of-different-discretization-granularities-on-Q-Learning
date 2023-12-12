@@ -17,14 +17,13 @@ def stability(rewards):
     avg_stability = stability / (len(rewards) + 2)
     return avg_stability * 100
 
-def output(rewards, times, total_time, epsilon, entropy, coverage, granularity='1x', run="1"):
+def output(rewards, times, total_time, epsilon, entropy, granularity='1x', run="1"):
     results = f"""Granularity: {granularity}
     Epsilon: {epsilon}
     Total time: {total_time:0.7f}s
     Best average reward: {rewards[-1]}
     Best time: {times[-1]}s
     Entropy: {entropy[-1]}s
-    Coverage: {coverage[-1]}s
     Stability: {stability(rewards)}%"""
 
     print(results)
@@ -43,9 +42,9 @@ def output(rewards, times, total_time, epsilon, entropy, coverage, granularity='
 
     with open(filepath, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['Rewards', 'Times', 'Entropy', 'Coverage'])
-        for avgReward, avgTime, avgEntropy, avgCoverage in zip(rewards, times, entropy, coverage):
-            csvwriter.writerow([avgReward, avgTime, avgEntropy, avgCoverage])
+        csvwriter.writerow(['Rewards', 'Times', 'Entropy'])
+        for avgReward, avgTime, avgEntropy in zip(rewards, times, entropy):
+            csvwriter.writerow([avgReward, avgTime, avgEntropy])
 
     # Plot Rewards
     plt.plot(100 * (np.arange(len(rewards)) + 1), rewards)

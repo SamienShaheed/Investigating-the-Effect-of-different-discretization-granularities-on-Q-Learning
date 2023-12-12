@@ -31,18 +31,11 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
     num_states = (discrete_actions[-1] - discrete_actions[0]) * np.array(
         [10 * granularity, 100 * granularity])
     num_states = np.round(num_states, 0).astype(int) + 1
-
-    # Debug Log
-    #print("Granularity:", granularity)
-    #print("Number of States:", num_states)
     
     # Initialize Q table
     Q = np.random.uniform(low=-1, high=1,
                           size=(num_states[0], num_states[1],
                                 len(discrete_actions)))
-
-    # Debug Log
-    #print(Q)
 
     # Initialize variables to track evaluation metrics
     reward_list = []
@@ -59,7 +52,7 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
 
     ######################################################
     # Calculate episodic reduction in epsilon
-    reduction = (epsilon - min_eps) / episodes
+    #reduction = (epsilon - min_eps) / episodes
     ######################################################
 
     # Run Q learning algorithm
@@ -73,9 +66,6 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
         # Discretize state
         state_adj = (state - discrete_actions[0]) * np.array([10 * granularity, 100 * granularity])
         state_adj = np.round(state_adj, 0).astype(int)
-
-        # Debug Log
-        #print("State adj: ", state_adj)
         
         while not terminated and not truncated:
            # Before taking an action, we track the current state's visit count
@@ -87,24 +77,15 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
                 action = np.argmax(Q[state_adj[0], state_adj[1]])
             else:
                 action = np.random.randint(0, len(discrete_actions))
-
-            # Debug Log
-            #if action == 1:
-            #    print("Action Value: ", action)
             
             #action_distribution = {action: 0 for action in range(len(discrete_actions))}
             action_distribution[action] += 1  # Track action distribution
-            
-            # Debug Log
-            #print("Action : ", action)
-            #print("Action Distribution: ", action_distribution[action])
             
             # Get next state and reward
             state2, reward, terminated, truncated, _ = env.step(np.array([action]))
             # update the reward, considering the original reward (-1 for each timestep) + energy stored * 100 as a
             # scaling factor to keep make both variables equally important (both to 1 decimal)
             reward += energy_stored(state2) * 100
-            #print("Reward before: ", reward)
 
             # Discretize state2
             state2_adj = (state2 - discrete_actions[0]) * np.array([10 * granularity, 100 * granularity])
@@ -123,24 +104,16 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
             # Update variables
             tot_reward += reward
             state_adj = state2_adj
-            
-            # Debug Log
-            #print("Reward: ", reward)
-            #print("Total Reward: ", tot_reward)
 
         ###############################
         # Decay epsilon
-        if epsilon > min_eps:
-           epsilon -= reduction
+        #if epsilon > min_eps:
+        #   epsilon -= reduction
         ###############################
         
         # Calculate exploration entropy after the episode ends
         entropy = calculate_entropy(action_distribution)
         entropy_list.append(entropy) # Add entropy to list
-        
-        # Calculate the coverage
-        coverage = len(state_visits) / np.prod(env.observation_space.shape)
-        coverage_list.append(coverage)
         
         # Track rewards and time
         toc = time.perf_counter()
@@ -162,13 +135,8 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
             avg_episode_entropy = np.mean(entropy_list)
             avg_episode_entropy_list.append(avg_episode_entropy)
             
-            # Calculate Average Coverage
-            avg_episode_coverage = np.mean(coverage_list)
-            avg_episode_coverage_list.append(avg_episode_coverage)
-            
             # print metrics every 100 episodes
             print(f"""Episode: {i + 1}
-    Coverage after episode {i+1}: {avg_episode_coverage}
     Entropy after episode {i+1}: {avg_episode_entropy}
     Average Reward: {avg_episode_reward}
     Average Time Taken: {avg_episode_time:0.7f}s""")
@@ -178,4 +146,4 @@ def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, 
     total_time_end = time.perf_counter()
     total_time = total_time_end - total_time_start
 
-    return avg_episode_reward_list, avg_episode_time_list, total_time, avg_episode_coverage_list, avg_episode_entropy_list
+    return avg_episode_reward_list, avg_episode_time_list, total_time, avg_episode_entropy_list
