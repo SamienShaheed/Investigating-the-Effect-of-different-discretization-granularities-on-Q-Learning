@@ -8,7 +8,7 @@ from utils.qLearning import QLearning
 from utils.discretize import discretize_action_space
 
 # Import and initialize Mountain Car Environment
-env = gym.make('MountainCarContinuous-v0')
+env = gym.make('MountainCarContinuous-v0', render_mode='human')
 env.reset()
 
 # Parameters

@@ -24,6 +24,8 @@ def energy_stored(observations):
 
 # Main Q-Learning Algorithm
 def QLearning(env, learning, discount, epsilon, min_eps, episodes, granularity, discrete_actions, state_visits, action_distribution, logFrequency):
+    env.render()
+    
     # start counter
     total_time_start = time.perf_counter()
 
